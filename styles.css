@@ -104,15 +104,14 @@ section img {
     justify-content: center;
     gap: 2vw; /* Use viewport width for gap */
     margin-top: 2vw; /* Add some space at the top */
-    overflow-x: auto; /* Allow horizontal scrolling on small screens if needed */
-    scroll-snap-type: x mandatory; /* Snap scrolling for better UX */
 }
 
 .image-item {
     display: flex;
     flex-direction: column; /* Stack image and caption vertically */
-    align-items: center; /* Center the image and caption horizontally */
-    text-align: center; /* Ensure the caption is center-aligned */
+    align-items: center; /* Center image and caption horizontally */
+    justify-content: center; /* Center image and caption vertically */
+    text-align: center; /* Ensure the caption is centered */
     flex: 1;
 }
 
@@ -127,10 +126,11 @@ section img {
 
 
 .image-item figcaption {
-    margin-top: 0.5vw;
-    font-size: 1.5vw; /* Scale font size */
+    margin-top: 1vw; /* Add some space between image and caption */
+    font-size: 1.2vw; /* Relative font size */
     color: #333;
-    text-align: center;
+    text-align: center; /* Center the caption text */
+    width: 100%; /* Make sure the caption width aligns with the image */
 }
 
 /* Team Member Styles */
