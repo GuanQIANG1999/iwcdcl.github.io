@@ -1,0 +1,296 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: white;
+    color: #000000;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1em 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #002145;
+    width: 100%;
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+    padding: 2em 0;
+    border-bottom: 1px solid #ddd;
+    background: #ffffff;
+}
+
+section:nth-of-type(odd) {
+    background: #b3c5de;
+}
+
+section h2 {
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    color: #002145;
+}
+
+section p {
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+section img {
+    display: block;
+    margin: 1em 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Team Member Styles */
+.team-member {
+    display: flex;
+    justify-content: center; /* Centers the whole team member content */
+    align-items: center;
+    margin-bottom: 40px; /* Adds more space between team members */
+    text-align: center; /* Centers the text */
+}
+
+.team-photo {
+    width: 240px; /* Adjust image size */
+    height: 320px; /* Make the image size square */
+    border-radius: 50%; /* Keeps the circular shape */
+    object-fit: cover; /* Ensures the image covers the container */
+    margin-right: 40px; /* Adds space between the image and text */
+}
+
+.team-photo-circle {
+    width: 10%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.team-photo-container {
+    margin-right: 20px;
+    flex: 0 1 25%;
+    width: 30%;
+}
+
+.team-photo-rectangular {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.team-info-principle {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.team-info {
+    flex-grow: 1;
+    max-width: 50%;
+    margin-right: 20px;
+}
+
+.team-info h3, .team-info h4 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.team-info p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+}
+
+.team-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Image Grid Styles */
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.image-item {
+    text-align: center;
+    flex: 1;
+}
+
+.image-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-item figcaption {
+    margin-top: 0.5em;
+    font-size: 0.6em;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: 2em;
+}
+
+footer .social a {
+    color: white;
+    margin: 0 0.5em;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #ddd;
+}
+
+/* New Styles for Principal Investigator Section */
+.flex-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-left {
+    width: 65%;
+    text-align: left;
+}
+
+.profile-right {
+    width: 30%;
+    padding-left: 20px;
+}
+
+.team-info-principle h3 {
+    font-size: 1.8em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    color: #002145;
+}
+
+.team-info-principle h4 {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    color: #476b9f;
+    margin-bottom: 10px;
+}
+
+.team-info-principle p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.profile-right h4 {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    color: #476b9f;
+}
+
+.profile-right p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.links-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.links-list li {
+    margin-bottom: 10px;
+}
+
+.links-list li a {
+    text-decoration: none;
+    color: #002145;
+}
+
+.links-list li a:hover {
+    text-decoration: underline;
+}
+
+.additional-info {
+    flex-grow: 1;
+    max-width: 70%;
+    margin-right: 20px;
+}
+
+.additional-info h4 {
+    font-size: 1.3em;
+    font-family: 'Arial', sans-serif;
+    color: #002145;
+    margin-bottom: 10px;
+}
+
+.additional-info p, .additional-info ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.additional-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
