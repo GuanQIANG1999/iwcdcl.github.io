@@ -127,7 +127,7 @@ section img {
 
 .image-item figcaption {
     margin-top: 1vw; /* Add some space between image and caption */
-    font-size: 1vw; /* Relative font size */
+    font-size: 1.2vw; /* Relative font size */
     color: #333;
     text-align: center; /* Center the caption text */
     width: 100%; /* Make sure the caption width aligns with the image */
