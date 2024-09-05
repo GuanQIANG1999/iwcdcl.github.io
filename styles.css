@@ -115,9 +115,10 @@ section img {
 }
 
 .image-item img {
-    width: 20vw; /* Full width of the container */
-    height: 20vw; /* Relative height to viewport width */
-    object-fit: cover; /* Crop image while maintaining aspect ratio */
+    width: 20vw; /* Set width relative to viewport */
+    height: auto; /* Let height adjust based on the aspect ratio */
+    aspect-ratio: 16 / 9; /* Maintain a fixed aspect ratio (16:9) */
+    object-fit: cover; /* Crop image to fit within the container */
     border-radius: 0.5vw; /* Rounded corners based on viewport width */
     overflow: hidden;
 }
