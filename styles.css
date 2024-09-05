@@ -101,7 +101,7 @@ section img {
 /* Responsive Image Grid */
 .image-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2vw; /* Use viewport width for gap */
     margin-top: 2vw; /* Add some space at the top */
     overflow-x: auto; /* Allow horizontal scrolling on small screens if needed */
@@ -109,9 +109,11 @@ section img {
 }
 
 .image-item {
-    flex: 1; /* Allow equal flexible size */
-    text-align: center;
-    scroll-snap-align: start; /* Snap to each image */
+    display: flex;
+    flex-direction: column; /* Stack image and caption vertically */
+    align-items: center; /* Center the image and caption horizontally */
+    text-align: center; /* Ensure the caption is center-aligned */
+    flex: 1;
 }
 
 .image-item img {
@@ -128,6 +130,7 @@ section img {
     margin-top: 0.5vw;
     font-size: 1.5vw; /* Scale font size */
     color: #333;
+    text-align: center;
 }
 
 /* Team Member Styles */
