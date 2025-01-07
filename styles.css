@@ -124,7 +124,6 @@ section img {
     overflow: hidden;
 }
 
-
 .image-item figcaption {
     margin-top: 1vw; /* Add some space between image and caption */
     font-size: 1.2vw; /* Relative font size */
@@ -133,51 +132,202 @@ section img {
     width: 100%; /* Make sure the caption width aligns with the image */
 }
 
-/* Team Member Styles */
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2vw; /* Scale margin */
-    text-align: center;
+/* Principal Investigator Section */
+#principal-investigator {
+    padding: 40px 20px; /* Add padding for spacing */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.team-photo {
-    width: 15vw; /* Scale image size */
-    height: auto;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 2vw;
+#principal-investigator .section-title {
+    font-size: 2rem;
+    color: #002145; /* Dark blue color for the title */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Add spacing below the title */
+}
+
+#principal-investigator hr {
+    border: none;
+    height: 2px;
+    background-color: #002145; /* Dark blue line for separation */
+    margin: 10px 0 30px; /* Add spacing around the line */
+}
+
+/* Flex Layout for Profile */
+.flex-layout {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between columns */
+    justify-content: space-between; /* Space out columns */
+}
+
+/* Left Column Styles */
+.profile-left {
+    flex: 1; /* Allow the left column to take up remaining space */
+    max-width: 60%; /* Limit the maximum width */
+}
+
+.team-photo-container {
+    text-align: center; /* Center align the image */
+    margin-bottom: 20px;
 }
 
 .team-photo-rectangular {
-    width: 40%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.5vw;
-    max-width: 90vw;
-    margin-right: 2vw;
+    width: 100%; /* Full width within the container */
+    max-width: 250px; /* Limit the maximum size of the photo */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 15px; /* Rounded corners for the photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-/* Principal Investigator Styles */
-.flex-layout {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.profile-left,
+/* Right Column Styles */
 .profile-right {
-    width: 100%; /* Full width on mobile */
+    flex: 1; /* Allow the right column to take up remaining space */
+    max-width: 35%; /* Limit the maximum width */
 }
 
-.profile-right {
-    padding-left: 0;
+.profile-right h4 {
+    font-size: 1.25rem;
+    color: #002145; /* Dark blue for section headers */
+    margin-bottom: 10px;
 }
 
+.profile-right p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
+.links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-list li {
+    margin-bottom: 10px; /* Spacing between links */
+}
+
+.links-list a {
+    color: #0056b3; /* Blue for links */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+    color: #003366; /* Darker blue on hover */
+}
+
+/* Additional Info Section */
 .additional-info {
-    max-width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ddd; /* Separator above additional info */
 }
+
+.additional-info h4 {
+    font-size: 1.25rem;
+    color: #002145; /* Dark blue for headers */
+    margin-bottom: 10px;
+}
+
+.additional-info p,
+.additional-info ul {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6; /* Better readability */
+    margin-bottom: 15px;
+}
+
+.additional-info ul {
+    padding-left: 20px; /* Indentation for list */
+}
+
+.additional-info ul li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .flex-layout {
+        flex-direction: column; /* Stack the columns vertically */
+        align-items: center; /* Center align the content */
+    }
+
+    .profile-left,
+    .profile-right {
+        max-width: 100%; /* Allow full width for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
+    .profile-right p {
+        text-align: center; /* Center align text */
+    }
+
+    .team-photo-rectangular {
+        max-width: 200px; /* Reduce the size of the photo */
+    }
+}
+
+@media (max-width: 576px) {
+    .team-photo-rectangular {
+        max-width: 150px; /* Further reduce the size for small screens */
+    }
+
+    .links-list a {
+        font-size: 0.9rem; /* Adjust link size for small screens */
+    }
+}
+
+
+/* Team Member Section */
+.team-member {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically align content */
+    margin-bottom: 20px; /* Space between team members */
+    gap: 20px; /* Space between photo and text */
+}
+
+/* Team Member Photo */
+.team-member .team-photo {
+    width: 180px; /* Smaller photo size for team members */
+    height: 240px;
+    border-radius: 50%; /* Oval style for photos */
+    object-fit: cover; /* Ensure image fills the container */
+}
+
+/* Team Member Info */
+.team-member .team-info {
+    flex: 1; /* Allow text to take up remaining space */
+}
+
+.team-member .team-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem; /* Slightly smaller than principal investigator */
+    color: #002145;
+}
+
+.team-member .team-info p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Team Members */
+@media (max-width: 768px) {
+    .team-member {
+        flex-direction: column; /* Stack photo and text */
+        text-align: center; /* Center align text */
+    }
+
+    .team-member .team-photo {
+        margin-bottom: 15px; /* Add spacing below the photo */
+    }
+}
+
 
 /* Footer Styles */
 footer {
@@ -218,22 +368,61 @@ footer .social a:hover {
     height: auto; /* Maintains aspect ratio */
 }
 
-/* Research Area Styles */
+/* Research Section */
+#research {
+    padding: 40px 20px; /* Add spacing around the section */
+    background-color: #f9f9f9; /* Light background for readability */
+}
+
+
+/* Research Area Styling */
 .research-area {
-    margin-bottom: 2vw;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Vertically align content */
+    gap: 20px; /* Space between image and text */
+    margin-bottom: 40px; /* Space between research topics */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.research-area h3 {
-    font-size: 1.8vw;
-    color: #002145;
-    margin-bottom: 0.5vw;
+/* Research Image Styling */
+.research-area .research-image {
+    width: 450px; /* Set a consistent width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.research-area p {
-    font-size: 1.2vw;
-    color: #333;
-    text-align: left;
+/* Research Content Styling */
+.research-content {
+    flex: 1; /* Allow text to take up remaining space */
 }
+
+.research-content h3 {
+    margin: 0 0 10px; /* Add space below the heading */
+    font-size: 1.5rem; /* Font size for subheadings */
+    color: #002145; /* Dark blue */
+}
+
+.research-content p {
+    margin: 0;
+    font-size: 1rem; /* Font size for body text */
+    color: #333; /* Dark gray for better readability */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .research-area {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .research-area .research-image {
+        margin-bottom: 20px; /* Add space below the image */
+    }
+}
+
 
 /* News Section Styles */
 #news .container {
